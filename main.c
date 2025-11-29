@@ -81,15 +81,54 @@ int main() {
                 if (enerji > 100) enerji = 100;
                 if (saglik > 100) saglik = 100;
                 break;
-
-            case 'F': // Tehlike Dalgası (FOR Döngüsü) [cite: 17]
-                printf("\n!!! TEHLIKE DALGASI BASLIYOR !!!\n");
-                // 3 Dalgalık bir saldırı simülasyonu
+            
+            case 'F': // Tehlike Dalgası (FOR Döngüsü)
+                printf("\n!!! TEHLIKE DALGASI BASLIYOR (3 Tur) !!!\n");
+                
+                int i; 
                 for (i = 1; i <= 3; i++) {
-                    int hasar = rand() % 10 + 1; // 1-10 arası hasar
-                    saglik -= hasar;
-                    printf("Dalga %d: Firtina vurdu! %d hasar aldin.\n", i, hasar);
-                    if (saglik <= 0) break; 
+                    printf("--- Dalga %d ---\n", i);
+                    
+                    // 1. DURUM: SIĞINAK KONTROLÜ
+                    // Sığınağın varsa %90 ihtimalle hiç hasar almazsın.
+                    if (siginak == 1) {
+                        if (rand() % 100 < 90) {
+                            printf(">> Siginagin sayesinde firtinadan korundun.\n");
+                            continue; // Döngünün başına dön, diğer kontrollere girme
+                        } else {
+                            printf(">> Siginagin kapisi kirildi! Hasar alacaksin.\n");
+                        }
+                    }
+
+                    // 2. DURUM: ENERJİ KONTROLÜ (KAÇMA İHTİMALİ)
+                    // Enerjin 40'tan fazlaysa kaçma şansın yüksek olur.
+                    if (enerji >= 40) {
+                        printf(">> Enerjin yerinde, tehlikeden kacmayi deniyorsun...\n");
+                        // %70 ihtimalle başarılı kaçış
+                        if (rand() % 100 < 70) {
+                            int harcananEnerji = rand() % 10 + 5;
+                            enerji -= harcananEnerji;
+                            printf(">> BASARILI! Hizlica kactin. (Hasar Yok, -%d Enerji)\n", harcananEnerji);
+                        } else {
+                            // Kaçamazsa hasar alır
+                            int hasar = rand() % 15 + 5;
+                            saglik -= hasar;
+                            printf(">> Kacamadin! Ayagin takildi. (-%d Saglik)\n", hasar);
+                        }
+                    } 
+                    // 3. DURUM: DÜŞÜK ENERJİ (SAVUNMASIZLIK)
+                    else {
+                        printf(">> Cok yorgunsun, kacamiyorsun!\n");
+                        int hasar = rand() % 20 + 10; // Daha çok hasar yer
+                        saglik -= hasar;
+                        printf(">> Savunmasiz yakalandin! (-%d Saglik)\n", hasar);
+                    }
+
+                    // Ölüm kontrolü
+                    if (saglik <= 0) {
+                        printf("\nTehlike sirasinda hayatini kaybettin...\n");
+                        break;
+                    }
                 }
                 break;
 
@@ -131,4 +170,5 @@ int main() {
 
     return 0;
 }
+
 
