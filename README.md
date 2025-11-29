@@ -1,4 +1,4 @@
-# Karakter Tabanlı Hayatta Kalma Simülatörü (C Language)
+# Karakter Tabanlı Hayatta Kalma Simülasyonu (C Language)
 
 Bu proje, Algoritma ve Programlama dersi kapsamında C dili ile geliştirilmiş, komut satırı üzerinden çalışan metin tabanlı bir hayatta kalma oyunudur.
 
@@ -42,4 +42,5 @@ Kod içerisinde `Switch-Case` yapısı menü yönetimi için, `Do-While` oyunun 
 
 ---
 **Geliştirici:** Samet Artan
+
 **Ders:** Algoritma ve Programlama
