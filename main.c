@@ -7,7 +7,7 @@ int main() {
     // Rastgele sayı üretimi için seed (zaman tabanlı)
     srand(time(NULL));
 
-    // Durum Değişkenleri [cite: 22]
+    // Durum Değişkenleri
     int saglik = 100;
     int enerji = 100;
     int yemek = 0;
@@ -18,7 +18,7 @@ int main() {
     printf("=== HAYATTA KALMA SIMULATORU ===\n");
     printf("Komutlar: [A]vlan, [S]iginak, [E]nvanter, [R]Dinlen, [F]Tehlike, [P]Sifre, [X]Cikis\n");
 
-    // OYUN DONGUSU (Do-While) [cite: 7]
+    // OYUN DONGUSU (Do-While) 
     do {
         printf("\nNe yapmak istiyorsun? > ");
         scanf(" %c", &komut);
@@ -52,7 +52,7 @@ int main() {
                     printf("Zaten bir siginagin var.\n");
                 } else {
                     enerji -= 15;
-                    // If-Else ile başarı kontrolü [cite: 14]
+                    // If-Else ile başarı kontrolü
                     if ((rand() % 100) < 30) { 
                         siginak = 1;
                         printf("Guvenli bir magara buldun! Artik siginagin var.\n");
@@ -62,7 +62,7 @@ int main() {
                 }
                 break;
 
-            case 'E': // Envanter Görüntüle [cite: 11]
+            case 'E': // Envanter Görüntüle
                 printf("\n--- DURUM RAPORU ---\n");
                 printf("Saglik: %d | Enerji: %d\n", saglik, enerji);
                 printf("Yemek: %d  | Siginak: %s\n", yemek, (siginak ? "VAR" : "YOK"));
@@ -170,5 +170,6 @@ int main() {
 
     return 0;
 }
+
 
 
