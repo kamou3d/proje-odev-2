@@ -12,6 +12,7 @@ int main() {
     int enerji = 100;
     int yemek = 0;
     int siginak = 0; // 0: Yok, 1: Var
+    int i;
     char komut;
 
     printf("=== HAYATTA KALMA SIMULATORU ===\n");
@@ -84,7 +85,7 @@ int main() {
             case 'F': // Tehlike Dalgası (FOR Döngüsü) [cite: 17]
                 printf("\n!!! TEHLIKE DALGASI BASLIYOR !!!\n");
                 // 3 Dalgalık bir saldırı simülasyonu
-                for (int i = 1; i <= 3; i++) {
+                for (i = 1; i <= 3; i++) {
                     int hasar = rand() % 10 + 1; // 1-10 arası hasar
                     saglik -= hasar;
                     printf("Dalga %d: Firtina vurdu! %d hasar aldin.\n", i, hasar);
@@ -130,3 +131,4 @@ int main() {
 
     return 0;
 }
+
