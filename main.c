@@ -50,6 +50,8 @@ int main() {
             case 'S': // Sığınak Arama
                 if (siginak == 1) {
                     printf("Zaten bir siginagin var.\n");
+                } else if (enerji <=15) {//enerji kontrolü
+                    printf("Siginak aramak icin cok yorgunsun! (Gereken Enerji: 15)\n");
                 } else {
                     enerji -= 15;
                     // If-Else ile başarı kontrolü
@@ -170,6 +172,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
