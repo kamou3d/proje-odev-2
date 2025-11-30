@@ -5,7 +5,7 @@ Bu proje, Algoritma ve Programlama dersi kapsamında C dili ile geliştirilmiş,
 ## 🎥 Proje Oynanış Videosu
 Aşağıdaki videoda projenin teknik çalışma mantığı, komutların işleyişi (A, S, F, P vb.) ve durum yönetimi simülasyonu detaylıca gösterilmektedir.
 
-[Videoyu indirmek veya izlemek için tıklayınız](kucuk_video.mp4)
+[▶️ Videoyu İndir ve İzle (MP4)](kucuk_video.mp4)
 
 > **Not:** Video yüklenemezse veya açılmazsa lütfen dosyalar arasındaki `.mp4` uzantılı dosyayı indirip izleyiniz.
 
