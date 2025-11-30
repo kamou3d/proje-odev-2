@@ -1,4 +1,4 @@
-# Karakter Tabanlı Hayatta Kalma Simülasyonu (C Language)
+# Karakter Tabanlı Hayatta Kalma Simülatörü (C Language)
 
 Bu proje, Algoritma ve Programlama dersi kapsamında C dili ile geliştirilmiş, komut satırı üzerinden çalışan metin tabanlı bir hayatta kalma oyunudur.
 
